@@ -1,0 +1,398 @@
+/* GENERAL */
+body {
+  font-family: Roboto;
+  color: dimgrey;
+  font-size: 16px;
+  line-height: 1.1;
+  background-color: #eaeaea;
+}
+
+h1 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-weight: lighter;
+}
+
+h5,
+h5 a {
+  font-size: 0.75rem;
+  color: dimgrey;
+}
+
+/* MENU */
+header {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+#logo-phone {
+  display: none;
+}
+
+header nav span a {
+  margin-left: 16px;
+  color: dimgrey;
+  transition: all .75s;
+}
+
+header nav span a:hover {
+  color: #7F5959;
+  font-weight: bold;
+}
+
+#black-logo {
+  color: black;
+  font-family: Ubuntu;
+}
+
+#grey-logo {
+  color: grey;
+  font-family: Ubuntu;
+  font-weight: lighter;
+}
+
+/* MENU PHONE */
+@media only screen and (max-width: 480px) {
+  nav,
+  .logo span {
+    display: none;
+  }
+
+  #logo-phone {
+    display: flex;
+  }
+
+  .logo-phone {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logo-phone img {
+    transition: all 0.5s;
+  }
+
+  .logo-phone img:hover {
+    background-color: #7F5959;
+    padding: 2rem 3rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+}
+
+/* BANNER */
+.banner {
+  display: flex;
+  background-color: lightgrey;
+  align-items: center;
+}
+
+.banner img {
+  width: 60%;
+  padding: 32px 40px 32px 24px;
+}
+
+.banner-title {
+  width: 25%;
+}
+
+.banner h2 {
+  margin-top: 1rem;
+  line-height: 1.2;
+}
+
+.banner-button a {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 8px;
+  background-color: dimgrey;
+  color: white;
+  transition: all 1s;
+}
+
+.banner-button:hover a {
+  font-weight: bold;
+  background-color: #7F5959;
+}
+
+/* BANNER PHONE */
+@media only screen and (max-width: 480px) {
+  .banner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #banner-phone {
+    height: 180px;
+    background-image: url("../images/banner.jpg");
+    /* background-color: darkgrey; I prefer with the image ! */
+    background-size: cover;
+    width: 100%;
+  }
+
+  .banner img {
+    display: none;
+  }
+
+  .banner-title {
+    width: auto;
+    padding: 2rem 1rem;
+  }
+}
+
+/* INFORMATIONS */
+.informations {
+  display: flex;
+}
+
+.informations-left {
+  border-right: lightgrey solid 2px;
+  padding: 32px 24px;
+}
+
+.informations .informations-left img,
+.informations .informations-left video {
+  width: 100%;
+  padding-bottom: 32px;
+}
+
+.informations-left h3 {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.informations h4 a {
+  color: dodgerblue;
+  transition: all .75s;
+}
+
+.informations h4 a:hover {
+  color: #7F5959;
+  font-weight: bold;
+}
+
+.information-container {
+  display: flex;
+  width: 423px;
+  align-items: center;
+  padding-right: 1rem;
+  border-bottom: lightgrey solid 1px;
+  transition: all .5s;
+}
+
+.information-container:hover {
+  background-color: lightgrey;
+}
+
+.information-container img {
+  width: 35%;
+  padding: 1rem;
+}
+
+#information-img-phone {
+  display: none;
+}
+
+.information-container h2 {
+  letter-spacing: 1px;
+}
+
+.information-container h3 {
+  padding-bottom: .5rem;
+  padding-top: .5rem;
+}
+
+/*INFORMATIONS PHONE */
+@media only screen and (max-width: 480px) {
+  .informations-left {
+    display: none;
+  }
+
+  .informations-right {
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: lightgrey solid 2px;
+  }
+
+  .information-container {
+    flex-direction: column;
+    width: auto;
+    padding: 1rem;
+    align-items: flex-start;
+    border: none;
+  }
+
+  .information-container img {
+    display: none;
+    padding: 0;
+  }
+
+  #information-img-phone {
+    display: flex;
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+
+  .information-text {
+    padding-left: 1rem;
+  }
+}
+
+/* COURSE */
+.course {
+  background-color: #dadada;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.course h1 {
+  padding-bottom: 1.5rem;
+}
+
+.courses-container {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.course-container {
+  background-color: white;
+  width: 25%;
+  margin: .5rem 1rem;
+  transition: all .5s;
+}
+
+.course-container:hover {
+  background-color: #7F5959;
+  color: white;
+  font-style: italic;
+}
+
+.course-container img {
+  width: 100%;
+}
+
+.course-text {
+  padding: 1rem 1rem 1.5rem 1rem;
+}
+
+.course-text h3 {
+  padding-top: .5rem;
+}
+
+/* COURSE PHONE */
+@media only screen and (max-width: 480px) {
+  .course {
+    background-color: #eaeaea;
+    width: 100%;
+    padding: 2rem 0 1.5rem 0;
+  }
+
+  .course h1 {
+    padding-bottom: 1rem;
+  }
+
+  .course-container img,
+  .course-container h3 {
+    display: none;
+  }
+
+  .courses-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .course-container {
+    width: auto;
+    background-color: lightgrey;
+    transition: all .5s;
+    margin: 0 1rem .5rem 1rem;
+  }
+
+  .course-text {
+    padding: 1rem;
+  }
+}
+
+/* THESIS */
+.thesis {
+  display: flex;
+  flex-direction: column;
+  border-bottom: lightgrey solid 2px;
+}
+
+.thesis .informations .informations-left {
+  padding: 0 1rem 0 1.5rem;
+}
+
+.thesis h1 {
+   text-align: center;
+   padding: 2rem;
+ }
+
+/* THESIS PHONE */
+@media only screen and (max-width: 480px) {
+  .thesis .informations .informations-left {
+    display: flex;
+  }
+
+  .thesis {
+    border-top: lightgrey solid 2px;
+  }
+
+  .thesis .informations-right,
+  .thesis .informations-left h2,
+  .thesis .informations-left h3 {
+    display: none;
+  }
+
+  .thesis .informations .informations-left {
+    padding: 0;
+  }
+}
+
+/* COPYRIGHT */
+.copyright {
+  display: flex;
+  padding: 2rem;
+}
+
+.copyright h5:first-child {
+  flex-grow: 1;
+}
+
+.copyright h5:last-child {
+  padding-left: 1rem;
+}
+
+/* COPYRIGHT PHONE */
+@media only screen and (max-width: 480px) {
+  .copyright h5 a {
+    display: none;
+  }
+
+  .copyright {
+    padding: 1rem;
+  }
+}
